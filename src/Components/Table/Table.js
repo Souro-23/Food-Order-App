@@ -10,60 +10,38 @@ const columns = [
     key:"sno"},
     {
       title: 'Item Name',
-      dataIndex: 'name',
-      key: 'name',
+      dataIndex: 'itemName',
+      key: 'itemName',
       render: text => <a>{text}</a>,
     },
     {
-      title: 'Quantiy',
-      dataIndex: 'quantiy',
-      key: 'quantiy',
+      title: 'Quantity',
+      dataIndex: 'quantity',
+      key: 'quantity',
     },
     {
       title: 'Price',
       dataIndex: 'price',
       key: 'price',
     },
-    {
-      title: 'Edit Quantity',
-      key: 'action',
-      render: (text, record) => (
-        <Space size="middle">
-          <Button icon={<RemoveIcon />} />
-          <Button type="primary" icon={<AddIcon />} />
-        </Space>
-      ),
-    },
   ];
   
-  const data = [
-    {
-      key: '1',
-      sno:'1',
-      name: 'Roasted Potato',
-      quantiy: "4kg",
-      price: "2 £"
-    },
-    {
-        key: '1',
-        sno:'2',
-        name: 'Pork',
-        quantiy: "1kg",
-        price: "45 £"
-      },
-      {
-        key: '1',
-        sno:'3',
-        name: 'Chicken',
-        quantiy: "2kg",
-        price: "23 £"
-      },
-    
-  ];
+  
 
 
 export class DataTable extends Component {
+  
     render() {
+      
+      const data = this.props.cartItems.map((item, index)=>{
+        return {
+          key:item.id,
+          sno:index,
+          itemName:item.itemName,
+          quantity:item.quantity,
+          price:item.price,
+        }
+      })
         return (
             <Table pagination={false} columns={columns} dataSource={data} />
         )
