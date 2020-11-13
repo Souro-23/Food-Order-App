@@ -9,15 +9,16 @@ export class ItemCard extends Component {
         const item = this.props.item
         
         return (
-            <Card className={classes.card}
+            <Card  className={classes.card}
                 cover={
                     <img
                         alt="example"
-                        src={item.previewImage}
-                        className={classes.foodImage} />}>
+                        src={item.image}
+                        className={classes.foodImage} />}
+                        >
                 <div >
-                    <h3>{item.itemName}</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <h3>{item.name}</h3>
+                    <p>{item.description}</p>
                 </div>
                 <br />
                 <div style={{ display: "flex", justifyContent: "space-between" }}>

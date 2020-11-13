@@ -9,7 +9,7 @@ import classes from './MyCart.module.css'
 
 export class MyCart extends Component {
     state = {
-        index: 0
+        index: 0,
     }
 
     changeTabs = index => {this.setState({index});};
@@ -25,12 +25,7 @@ export class MyCart extends Component {
                             </div>
                         </div>
                         <div>
-                            <UserForm {...this.props}/>
-                            <br /><br />
-                            <div style={{ display: "flex", justifyContent: "end" }}>
-                                <Button  className={classes.mybutton} onClick={() => this.setState({ index: 0 })} >Back</Button>
-                                <Button className={classes.mybutton} style={{ marginLeft: "20px" }} type="primary">Confirm Order</Button>
-                            </div>
+                            <UserForm {...this.props} back={() => this.setState({ index: 0 })}/>
                         </div>
                     </SwipeableViews>
         )

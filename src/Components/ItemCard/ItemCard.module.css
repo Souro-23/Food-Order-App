@@ -2,11 +2,14 @@
 	margin:15px;
 	display: block;
 	top: 0px;
-	border-radius: 7px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, .1);
 	position: relative;
 	z-index: 0;
-	 
+	cursor: pointer;
+
+	/* border-radius: 10px!important;
+	border-top: 15px solid black!important;
+	  */
 }
 
 .card:hover{

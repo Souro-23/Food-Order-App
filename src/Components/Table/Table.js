@@ -10,8 +10,8 @@ const columns = [
     key:"sno"},
     {
       title: 'Item Name',
-      dataIndex: 'itemName',
-      key: 'itemName',
+      dataIndex: 'name',
+      key: 'name',
       render: text => <a>{text}</a>,
     },
     {
@@ -37,7 +37,7 @@ export class DataTable extends Component {
         return {
           key:item.id,
           sno:index,
-          itemName:item.itemName,
+          name:item.name,
           quantity:item.quantity,
           price:item.price,
         }

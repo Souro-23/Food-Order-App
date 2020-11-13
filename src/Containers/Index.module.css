@@ -5,7 +5,7 @@
     padding:10px 60px;
     position:fixed;
     width: 100%;
-    background-color: white;
+    background-color: gainsboro;
     z-index: 500;
 }
 .header > h1{
@@ -13,10 +13,10 @@
 }
 .banner{
     height: 250px;
-    background-color: blue;
+    background-color: gray;
 }
 .banner h1{
-    font-size: 40px;
+    font-size: 45px;
     font-weight: bold;
 }
 .banner p{
@@ -31,10 +31,18 @@
     color: white;
 }
 .content{
-    width: 70%;
+    width: 65%;
     margin:0px auto ;
 }
 
+
+
+@media only screen and (max-width: 980px) {
+    .content{
+        width:70%;
+        margin:0px auto ;
+    }
+}
 
 
 
@@ -47,5 +55,9 @@
     }
     .banner p{
         font-size: 16px;
+    }
+    .content{
+        width:75%;
+        margin:0px auto ;
     }
 }
